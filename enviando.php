@@ -71,11 +71,11 @@ if(isset($_POST['email'])) {
  
   }
  
-  if(!preg_match($string_exp,$last_name)) {
+  // if(!preg_match($string_exp,$last_name)) {
  
-    $error_message .= 'el formato del apellido no es válido.<br />';
+  //   $error_message .= 'el formato del apellido no es válido.<br />';
  
-  }
+  // }
  
   if(strlen($message) < 2) {
  
