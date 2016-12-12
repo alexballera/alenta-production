@@ -12,7 +12,7 @@ if($_POST["name"] && $_POST["email"] != ""){
 	$mensaje .= "Teléfono: " . utf8_decode($_POST["telephone"]) ."\n";
 	$mensaje .= "\n";
 	$mensaje .= "Mensaje: " . utf8_decode($_POST["message"]) ."\n";
-    $emailheader = "From: Gracias por escribirnos<tuemail>\r\n";
+    $emailheader = "From: Gracias por escribirnos\r\n";
 mail($destino, $asunto, $mensaje, $emailheader) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
 	} else {
