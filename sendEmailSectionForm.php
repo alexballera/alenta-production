@@ -1,11 +1,8 @@
 <?php
-$nombre = $_POST['name'];
-$email = $_POST['email'];
-$email_admin = "alexballera@gmail.com"
 
-if($nombre && $email != ""){
+if($_POST["name"] && $_POST["email"] != ""){
   $de = $_POST["name"];
-  $destino = $email_admin;
+  $destino = "alexballera@gmail.com";
   $asunto = "Tienes un mensaje desde el sitio Web Alenta ";
   $mensaje .= "Mensaje Desde El Formulario Web Alenta."."\n";
   $mensaje .= "\n";
@@ -16,12 +13,12 @@ if($nombre && $email != ""){
   $mensaje .= "Teléfono: " . utf8_decode($_POST["telephone"]) ."\n";
   $mensaje .= "\n";
   $mensaje .= "Mensaje: " . utf8_decode($_POST["message"]) ."\n";
-  // $header = 'From: ' . $mail . ", de la poblacion ".$poblacion."\r\n";
-  // $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-  // $header .= "Mime-Version: 1.0 \r\n";
-  // $header .= "Content-Type: text/plain";
-    $emailheader = "From: $email_admin\r\n";
-mail($destino, $asunto, $mensaje, $emailheader) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
+  $header = "From: alexballera@gmail.com\r\n";
+  $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+  $header .= "Mime-Version: 1.0 \r\n";
+  $header .= "Content-Type: text/plain";
+    // $emailheader = "From: alexballera@gmail.com\r\n";
+mail($destino, $asunto, $mensaje, $header) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
   } else {
     if($_POST["name"] == ""){
