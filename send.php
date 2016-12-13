@@ -40,9 +40,9 @@ $success = mail($destino, $asunto, $mensaje, $header);
 
 // redirect to success page
 if ($success){
-   echo "Mensaje enviado";
+  echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 }else{
-    echo "Mensaje no enviado";
+  echo '<script language="javascript">alert("Revisa los datos ingresados");</script>';
 }
 
 // if($_POST){
