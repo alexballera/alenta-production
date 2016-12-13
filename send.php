@@ -1,12 +1,13 @@
 <?php
 
-$nombre = strip_tags($_POST['form_name']);
-$fecha = time();
-$fechaFormateada = date("j/n/Y", $fecha);
 $name = $_POST["form_name"];
 $email = $_POST["form_email"];
 $phone = $_POST["form_phone"];
 $message = $_POST["form_msg"];
+
+$fecha = time();
+$fechaFormateada = date("j/n/Y", $fecha);
+$nombre = strip_tags($name);
 
 
 $destino = "alexballera@gmail.com";
@@ -33,7 +34,8 @@ $headers .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
 // if($_POST["form_name"] && $_POST["form_email"] != ""){
 if($_POST){
-mail($destino, $asunto, $mensaje, $header) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
+// mail($destino, $asunto, $mensaje, $header) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
+mail($destino, $asunto, $mensaje, $header);
 // echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
   } else {
