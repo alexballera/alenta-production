@@ -33,13 +33,12 @@ $header .= 'From:' . $email. "\r\n"; // Sender's Email
 $header .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
 // send email
-// $success =
-mail($emailTo, $subject, $body, $header);
+$success = mail($emailTo, $subject, $body, $header);
 
 // redirect to success page
-// if ($success){
-//   echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
-// }else{
-//   echo '<script language="javascript">alert("Revisa los datos ingresados");</script>';
-// }
+if ($success){
+  echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
+}else{
+  echo '<script language="javascript">alert("Revisa los datos ingresados");</script>';
+}
 ?>
