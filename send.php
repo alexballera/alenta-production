@@ -14,13 +14,13 @@ if($_POST){
   $asunto = "Tienes un mensaje de $nombre ";
   $mensaje .= "Mensaje Desde El Formulario Web Alenta."."\n";
   $mensaje .= "\n";
-  $mensaje .= "Nombre: " $name "\n";
+  $mensaje .= "Nombre: $name \n";
   $mensaje .= "\n";
-  $mensaje .= "Correo: " $email "\n";
+  $mensaje .= "Correo: $email \n";
   $mensaje .= "\n";
-  $mensaje .= "Teléfono: " $telephone "\n";
+  $mensaje .= "Teléfono: $telephone \n";
   $mensaje .= "\n";
-  $mensaje .= "Mensaje: " $message "\n";
+  $mensaje .= "Mensaje: $message \n";
   $mensaje .= "\n";
   $mensaje .= "Fecha: " . $fechaFormateada ."\n";
   $header = "From: alexballera@gmail.com\r\n";
