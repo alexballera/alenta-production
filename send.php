@@ -1,7 +1,7 @@
 <?php
 
 
-// if($_POST["name"] && $_POST["email"] != ""){
+if($_POST["name"] && $_POST["email"] != ""){
   $nombre = strip_tags($_POST['name']);
   $fecha = time();
   $fechaFormateada = date("j/n/Y", $fecha);
@@ -24,7 +24,7 @@
   $header .= "Mime-Version: 1.0 \r\n";
   $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
     // $emailheader = "From: alexballera@gmail.com\r\n";
-if (mail($destino, $asunto, $mensaje, $header))
+mail($destino, $asunto, $mensaje, $header)
   echo('1');
 // or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 // echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
