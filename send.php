@@ -37,8 +37,33 @@ $success = mail($emailTo, $subject, $body, $header);
 
 // redirect to success page
 if ($success){
-  true
+  echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 }else{
-  false
+  echo '<script language="javascript">alert("Revisa los datos ingresados");</script>';
 }
+
+// if($_POST){
+// mail($destino, $asunto, $mensaje, $header);
+// echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
+//   } else {
+//
+//     if($_POST["name"] == ""){
+//     echo '<script language="javascript">alert("Por favor, indica tu nombre.");</script>';
+//     exit; }
+//     if($_POST["email"] == ""){
+//     echo '<script language="javascript">alert("Por favor, indica un email de contacto.");</script>';
+//     exit; }
+// }
+
+// if($_POST["form_name"] && $_POST["form_email"] != ""){
+// mail($destino, $asunto, $mensaje, $header) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
+// echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
+  // } else {
+
+    // if($_POST["name"] == ""){
+    // echo utf8_encode ('Por favor, indica tu nombre.');
+    // exit; }
+    // if($_POST["email"] == ""){
+    // echo utf8_encode ('Por favor, indica un email de contacto.');
+// }
 ?>
