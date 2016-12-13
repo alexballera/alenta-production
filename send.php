@@ -1,4 +1,14 @@
 <?php
+    $toEmail = "alexballera@gmail.com";
+    $mailHeaders = "From: " . $_POST["form_name"] . "<". $_POST["form_email"] .">\r\n";
+    if(mail($toEmail, "Nuevo mensaje", $_POST["form_msg"], $mailHeaders)) {
+        print "<p class='success'>Mail Sent.</p>";
+    } else {
+        print "<p class='Error'>Problem in Sending Mail.</p>";
+    }
+?>
+
+<!-- <?php
 
 $name = $_POST["form_name"];
 $lastname = $_POST["form_lastname"];
@@ -41,4 +51,4 @@ if ($success){
 }else{
   false
 }
-?>
+?> -->
