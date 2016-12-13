@@ -25,12 +25,12 @@ $fechaFormateada = date("j/n/Y", $fecha);
   $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
     // $emailheader = "From: alexballera@gmail.com\r\n";
 if (mail($destino, $asunto, $mensaje, $header))
-  echo(1);
+  echo('1');
 // or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 // echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
 // echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
   } else {
-    echo(0);
+    echo('0');
 
 //     if($_POST["name"] == ""){
 //     // echo utf8_encode ('Por favor, indica tu nombre.');
