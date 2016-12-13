@@ -28,8 +28,7 @@ mail($destino, $asunto, $mensaje, $header)
 // or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 // echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
 // echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
-  }
-  // else {
+  // } else {
 //
 //     if($_POST["name"] == ""){
     // echo utf8_encode ('Por favor, indica tu nombre.');
