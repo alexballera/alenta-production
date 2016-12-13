@@ -20,9 +20,9 @@ if($_POST){
   $mensaje .= "\n";
   $mensaje .= "Teléfono: " $telephone "\n";
   $mensaje .= "\n";
-  $mensaje .= "Fecha: " . $fechaFormateada ."\n";
+  $mensaje .= "Mensaje: " $message "\n";
   $mensaje .= "\n";
-  $mensaje .= "Mensaje: " . $message ."\n";
+  $mensaje .= "Fecha: " . $fechaFormateada ."\n";
   $header = "From: alexballera@gmail.com\r\n";
   $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
   $header .= "Mime-Version: 1.0 \r\n";
