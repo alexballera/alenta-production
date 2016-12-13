@@ -1,6 +1,7 @@
 <?php
 
 $name = $_POST["form_name"];
+$lastname = $_POST["form_lastname"];
 $email = $_POST["form_email"];
 $phone = $_POST["form_phone"];
 $message = $_POST["form_msg"];
@@ -17,6 +18,8 @@ $asunto = "Tienes un mensaje de $nombre";
 $mensaje .= "Mensaje Desde El Formulario Web Alenta."."\n";
 $mensaje .= "\n";
 $mensaje .= "Nombre: " . $name ."\n";
+$mensaje .= "\n";
+$mensaje .= "Apellido: " . $lastname ."\n";
 $mensaje .= "\n";
 $mensaje .= "Correo: " . $email ."\n";
 $mensaje .= "\n";
