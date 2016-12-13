@@ -24,21 +24,18 @@ if($_POST["name"] && $_POST["email"] != ""){
   $header .= "Mime-Version: 1.0 \r\n";
   $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
     // $emailheader = "From: alexballera@gmail.com\r\n";
-mail($destino, $asunto, $mensaje, $header)
-  echo('1');
-// or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
+mail($destino, $asunto, $mensaje, $header) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 // echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
-// echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
+echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
   } else {
-    echo('0');
 
-//     if($_POST["name"] == ""){
-//     // echo utf8_encode ('Por favor, indica tu nombre.');
-//     echo '<script language="javascript">alert("Por favor, indica tu nombre.");</script>';
-//     exit; }
-//     if($_POST["email"] == ""){
-//     // echo utf8_encode ('Por favor, indica un email de contacto.');
-//     echo '<script language="javascript">alert("Por favor, indica un email de contacto.");</script>';
-//     exit; }
+    if($_POST["name"] == ""){
+    // echo utf8_encode ('Por favor, indica tu nombre.');
+    echo '<script language="javascript">alert("Por favor, indica tu nombre.");</script>';
+    exit; }
+    if($_POST["email"] == ""){
+    // echo utf8_encode ('Por favor, indica un email de contacto.');
+    echo '<script language="javascript">alert("Por favor, indica un email de contacto.");</script>';
+    exit; }
 }
 ?>
