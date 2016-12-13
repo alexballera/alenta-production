@@ -13,7 +13,7 @@ if($_POST){
   $asunto = "Tienes un mensaje de $nombre ";
   $mensaje .= "Mensaje Desde El Formulario Web Alenta."."\n";
   $mensaje .= "\n";
-  $mensaje .= "Nombre: $name \n";
+  $mensaje .= "Nombre: $nombre \n";
   $mensaje .= "\n";
   $mensaje .= "Correo: " . $email ."\n";
   $mensaje .= "\n";
@@ -22,7 +22,7 @@ if($_POST){
   $mensaje .= "Fecha: " . $fechaFormateada ."\n";
   $mensaje .= "\n";
   $mensaje .= "Mensaje: " . $message ."\n";
-  $header = "From: alexballera@gmail.com\r\n";
+  $header .= "From: alexballera@gmail.com\r\n";
   $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
   $header .= "Mime-Version: 1.0 \r\n";
   $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
