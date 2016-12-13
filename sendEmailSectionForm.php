@@ -22,7 +22,7 @@ if($_POST["name"] && $_POST["email"] != ""){
   $header = "From: alexballera@gmail.com\r\n";
   $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
   $header .= "Mime-Version: 1.0 \r\n";
-  $header .= "Content-Type: text/plain";
+  $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
     // $emailheader = "From: alexballera@gmail.com\r\n";
 mail($destino, $asunto, $mensaje, $header) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
