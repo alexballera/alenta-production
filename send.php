@@ -13,7 +13,7 @@ if($_POST){
   $asunto = "Tienes un mensaje de $nombre ";
   $mensaje .= "Mensaje Desde El Formulario Web Alenta."."\n";
   $mensaje .= "\n";
-  $mensaje .= "Nombre: " $name "\n";
+  $mensaje .= "Nombre: $name \n";
   $mensaje .= "\n";
   $mensaje .= "Correo: " . $email ."\n";
   $mensaje .= "\n";
