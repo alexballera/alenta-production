@@ -1,24 +1,24 @@
 <?php
 
 
-if($_POST["name"] && $_POST["email"] != ""){
-  $nombre = strip_tags($_POST['name']);
+if($_POST["form_name"] && $_POST["form_email"] != ""){
+  $nombre = strip_tags($_POST['form_name']);
   $fecha = time();
   $fechaFormateada = date("j/n/Y", $fecha);
-  $de = $_POST["name"];
+  $de = $_POST["form_name"];
   $destino = "alexballera@gmail.com";
   $asunto = "Tienes un mensaje de $nombre ";
   $mensaje .= "Mensaje Desde El Formulario Web Alenta."."\n";
   $mensaje .= "\n";
-  $mensaje .= "Nombre: " . utf8_decode($_POST["name"]) ."\n";
+  $mensaje .= "Nombre: " . utf8_decode($_POST["form_name"]) ."\n";
   $mensaje .= "\n";
-  $mensaje .= "Correo: " . utf8_decode($_POST["email"]) ."\n";
+  $mensaje .= "Correo: " . utf8_decode($_POST["form_email"]) ."\n";
   $mensaje .= "\n";
-  $mensaje .= "Teléfono: " . utf8_decode($_POST["telephone"]) ."\n";
+  $mensaje .= "Teléfono: " . utf8_decode($_POST["form_phone"]) ."\n";
   $mensaje .= "\n";
   $mensaje .= "Fecha: " . $fechaFormateada ."\n";
   $mensaje .= "\n";
-  $mensaje .= "Mensaje: " . utf8_decode($_POST["message"]) ."\n";
+  $mensaje .= "Mensaje: " . utf8_decode($_POST["form_msg"]) ."\n";
   $header = "From: alexballera@gmail.com\r\n";
   $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
   $header .= "Mime-Version: 1.0 \r\n";
