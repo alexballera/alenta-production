@@ -8,7 +8,7 @@ if($_POST){
   $name = $_POST["name"];
   $email = $_POST["email"];
   $telephone = $_POST["telephone"];
-  $message = $_POST["message"]
+  $message = $_POST["message"];
   $destino = "alexballera@gmail.com";
   $asunto = "Tienes un mensaje de $nombre ";
   $mensaje = "Mensaje Desde El Formulario Web Alenta."."\n";
