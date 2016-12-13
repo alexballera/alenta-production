@@ -22,7 +22,7 @@ $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
 $headers .= 'From:' . $email. "\r\n"; // Sender's Email
 $headers .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
-if($_POST["form_name"] && $_POST["form_email"] != ""){
+if($_POST){
 mail($destino, $asunto, $mensaje, $header) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 // echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
