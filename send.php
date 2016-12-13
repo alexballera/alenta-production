@@ -11,7 +11,7 @@ $fechaFormateada = date("j/n/Y", $fecha);
 $nombre = strip_tags($name);
 
 
-$from = "alexballera@gmail.com";
+$emailTo = "alexballera@gmail.com";
 
 $subject = "Tienes un mensaje de $nombre";
 
@@ -32,11 +32,11 @@ $body .= "Fecha: " . $fechaFormateada ."\n";
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
 $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
-$headers .= 'From:' . $email. "\r\n"; // Sender's Email
-$headers .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
+$header .= 'From:' . $email. "\r\n"; // Sender's Email
+// $header .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
 // send email
-$success = mail($from, $subject, $body, $header);
+$success = mail($emailTo, $subject, $body, $header);
 
 // redirect to success page
 if ($success){
