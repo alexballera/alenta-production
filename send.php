@@ -7,6 +7,11 @@ if($_POST){
     $message = $_POST['form_msg'];
 
 //send email
-    mail("j.andrew.sears@gmail.com", "51 Deep comment from" .$email, $message);
+    // mail("j.andrew.sears@gmail.com", "51 Deep comment from" .$email, $message);
+    mail($name, $lastname, $telephone, $email, $message);
+} else {
+  echo '<script language="javascript">
+          console.log("No se envió el correo.");
+        </script>';
 }
 ?>
