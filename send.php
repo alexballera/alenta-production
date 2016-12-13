@@ -12,7 +12,6 @@ $nombre = strip_tags($name);
 
 
 $emailTo = "alexballera@gmail.com";
-
 $subject = "Tienes un mensaje de $nombre";
 
 $body .= "Mensaje Desde El Formulario Web Alenta."."\n";
@@ -33,7 +32,7 @@ $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
 $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
 $header .= 'From:' . $email. "\r\n"; // Sender's Email
-// $header .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
+$header .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
 // send email
 $success = mail($emailTo, $subject, $body, $header);
