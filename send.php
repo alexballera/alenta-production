@@ -1,10 +1,10 @@
 <?php
 
-$nombre = strip_tags($_POST['name']);
-$fecha = time();
-$fechaFormateada = date("j/n/Y", $fecha);
 
 // if($_POST["name"] && $_POST["email"] != ""){
+  $nombre = strip_tags($_POST['name']);
+  $fecha = time();
+  $fechaFormateada = date("j/n/Y", $fecha);
   $de = $_POST["name"];
   $destino = "alexballera@gmail.com";
   $asunto = "Tienes un mensaje de $nombre ";
