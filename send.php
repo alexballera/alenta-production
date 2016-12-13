@@ -11,7 +11,7 @@ $message = $_POST["form_msg"];
 
 $destino = "alexballera@gmail.com";
 
-$asunto = "Tienes un mensaje de " . $name .;
+$asunto = "Tienes un mensaje de $nombre";
 
 $mensaje .= "Mensaje Desde El Formulario Web Alenta."."\n";
 $mensaje .= "\n";
