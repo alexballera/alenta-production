@@ -1,7 +1,7 @@
 <?php
 
 
-if($_POST["name"] && $_POST["email"] != ""){
+if($_POST){
   $nombre = strip_tags($_POST['name']);
   $fecha = time();
   $fechaFormateada = date("j/n/Y", $fecha);
