@@ -5,10 +5,10 @@ if($_POST){
   $nombre = strip_tags($_POST['name']);
   $fecha = time();
   $fechaFormateada = date("j/n/Y", $fecha);
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $telephone = $_POST["telephone"];
-  $message = $_POST["message"];
+  $name = $nombre;
+  $email = strip_tags($_POST["email"]);
+  $telephone = strip_tags($_POST["telephone"]);
+  $message = strip_tags($_POST["message"]);
   $destino = "alexballera@gmail.com";
   $asunto = "Tienes un mensaje de $nombre ";
   $mensaje = "Mensaje Desde El Formulario Web Alenta."."\n";
