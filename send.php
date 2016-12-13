@@ -36,7 +36,7 @@ $header .= 'From:' . $from. "\r\n"; // Sender's Email
 $header .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
 // send email
-$success = mail($header, $subject, $body);
+$success = mail($from, $subject, $body, $header);
 
 // redirect to success page
 if ($success){
