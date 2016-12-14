@@ -41,18 +41,28 @@ $success = mail($emailTo, $subject, $body, $header);
 // redirect to success page
 if ($success){
   // echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
-  echo '<scripts language="javascript">
-          $( function() {
-          $( "#dialog-message" ).dialog({
-            modal: true,
-            buttons: {
-              Ok: function() {
-                $( this ).dialog( "close" );
-              }
-            }
-          });
-        } );
-        </script>'
+  echo '
+  <div id="dialog-message" title="Download complete">
+    <p>
+      <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+      Your files have downloaded successfully into the My Downloads folder.
+    </p>
+    <p>
+      Currently using <b>36% of your storage space</b>.
+    </p>
+  </div>
+  <scripts language="javascript">
+    $( function() {
+    $( "#dialog-message" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );
+</script>'
 }else{
   echo '<script language="javascript">alert("Revisa los datos ingresados");</script>';
 }
