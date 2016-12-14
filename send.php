@@ -15,6 +15,8 @@ $body .= "\n";
 $body .= "EMAIL: " . $email ."\n";
 
 $body .= "\n";
+$body .= "Mensaje: " . $message ."\n";
+$body .= "\n";
 $body .= "Fecha: " . $fechaFormateada ."\n";
 
   $emailheader = "From: alexballera@gmail.com\r\n";
