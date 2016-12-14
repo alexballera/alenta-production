@@ -5,12 +5,13 @@ $lastname = $_POST["form_lastname"];
 $email = $_POST["form_email"];
 $phone = $_POST["form_phone"];
 $message = $_POST["form_msg"];
+$nombre = strip_tags($_POST['name']);
 
 $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha);
 
 $destino = "alexballera@gmail.com";
-$subject = "Nuevo mensaje";
+$subject = "Nuevo mensaje de $nombre";
 
 $body .= "Mensaje Desde El Formulario Web Alenta."."\n";
 $body .= "\n";
