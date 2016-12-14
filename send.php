@@ -1,11 +1,11 @@
 <?php
 
-$name = $_POST["form_name"];
-$lastname = $_POST["form_lastname"];
-$email = $_POST["form_email"];
-$phone = $_POST["form_phone"];
-$message = $_POST["form_msg"];
-$nombre = strip_tags($_POST['form_name']);
+$name = $_POST["name"];
+$lastname = $_POST["lastname"];
+$email = $_POST["email"];
+$phone = $_POST["phone"];
+$message = $_POST["message"];
+$nombre = strip_tags($_POST['name']);
 
 $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha);
