@@ -11,8 +11,8 @@ $fechaFormateada = date("j/n/Y", $fecha);
 
 $destino = "alexballera@gmail.com";
 $asunto = "FORMULARIO DE EJEMPLO";
-$body .= "FORMULARIO."."\n";
 
+$body .= "Mensaje Desde El Formulario Web Alenta."."\n";
 $body .= "\n";
 $body .= "Nombre: " . $name ."\n";
 $body .= "\n";
