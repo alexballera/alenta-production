@@ -9,24 +9,19 @@ $message = $_POST["form_msg"];
 $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha)
 
-$destino = "alexballera@gmail.com";
-$asunto = "FORMULARIO DE EJEMPLO";
+	$destino = "alexballera@gmail.com";
+	$asunto = "FORMULARIO DE EJEMPLO";
 
-$body .= "Mensaje Desde El Formulario Web Alenta."."\n";
-$body .= "\n";
-$body .= "Nombre: " . $name ."\n";
-$body .= "\n";
-$body .= "Apellido: " . $lastname ."\n";
-$body .= "\n";
-$body .= "Correo: " . $email ."\n";
-$body .= "\n";
-$body .= "Teléfono: " . $phone ."\n";
-$body .= "\n";
-$body .= "Mensaje: " . $message ."\n";
-$body .= "\n";
-$body .= "Fecha: " . $fechaFormateada ."\n";
 
-$emailheader = "From: alexballera@gmail.com\r\n";
+	$body .= "FORMULARIO."."\n";
+	$body .= "\n";
+	$body .= "NOMBRE: " . $name ."\n";
+	$body .= "\n";
+	$body .= "EMAIL: " . $email ."\n";
+  $body .= "\n";
+  $body .= "Fecha: " . $fechaFormateada ."\n";
+
+  $emailheader = "From: alexballera@gmail.com\r\n";
 
 if($_POST){
 mail($destino, $asunto, $body, $emailheader);
