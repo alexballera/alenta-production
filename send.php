@@ -5,7 +5,7 @@ $lastname = $_POST["form_lastname"];
 $email = $_POST["form_email"];
 $phone = $_POST["form_phone"];
 $message = $_POST["form_msg"];
-$nombre = strip_tags($_POST['name']);
+$nombre = strip_tags($_POST['form_name']);
 
 $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha);
@@ -27,10 +27,14 @@ $body .= "Mensaje: " . $message ."\n";
 $body .= "\n";
 $body .= "Fecha: " . $fechaFormateada ."\n";
 
-  $emailheader = "From: alexballera@gmail.com\r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
+$header .= 'From:' . $email. "\r\n"; // Sender's Email
+$header .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
 if($_POST){
-mail($emailTo, $subject, $body, $emailheader);
+mail($emailTo, $subject, $body, $header);
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 	} else {
     if($_POST["form_name"] == ""){
