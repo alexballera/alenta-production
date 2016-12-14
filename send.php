@@ -6,13 +6,17 @@ $email = $_POST["form_email"];
 $phone = $_POST["form_phone"];
 $message = $_POST["form_msg"];
 
-	$destino = "alexballera@gmail.com";
-	$asunto = "FORMULARIO DE EJEMPLO";
-	$body .= "FORMULARIO."."\n";
-	$body .= "\n";
-	$body .= "NOMBRE: " . $name ."\n";
-	$body .= "\n";
-	$body .= "EMAIL: " . $email ."\n";
+$destino = "alexballera@gmail.com";
+$asunto = "FORMULARIO DE EJEMPLO";
+$body .= "FORMULARIO."."\n";
+$body .= "\n";
+$body .= "NOMBRE: " . $name ."\n";
+$body .= "\n";
+$body .= "EMAIL: " . $email ."\n";
+
+$body .= "\n";
+$body .= "Fecha: " . $fechaFormateada ."\n";
+
   $emailheader = "From: alexballera@gmail.com\r\n";
 
 if($_POST){
