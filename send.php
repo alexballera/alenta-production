@@ -14,9 +14,10 @@ $asunto = "FORMULARIO DE EJEMPLO";
 $body .= "FORMULARIO."."\n";
 $body .= "\n";
 $body .= "NOMBRE: " . $name ."\n";
-$body .= "\n";
-$body .= "EMAIL: " . $email ."\n";
 
+
+$body .= "\n";
+$body .= "Correo: " . $email ."\n";
 $body .= "\n";
 $body .= "Teléfono: " . $phone ."\n";
 $body .= "\n";
