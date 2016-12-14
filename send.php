@@ -1,5 +1,5 @@
 <?php
-if($_POST["form_name"] && $_POST["form_email"] != ""){
+
 	$de = $_POST["form_name"];
 	$destino = "alexballera@gmail.com";
 	$asunto = "FORMULARIO DE EJEMPLO";
@@ -8,7 +8,9 @@ if($_POST["form_name"] && $_POST["form_email"] != ""){
 	$mensaje .= "NOMBRE: " . utf8_decode($_POST["form_name"]) ."\n";
 	$mensaje .= "\n";
 	$mensaje .= "EMAIL: " . utf8_decode($_POST["form_email"]) ."\n";
-    $emailheader = "From: alexballera@gmail.com\r\n";
+  $emailheader = "From: alexballera@gmail.com\r\n";
+
+if($_POST["form_name"] && $_POST["form_email"] != ""){
 mail($destino, $asunto, $mensaje, $emailheader) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
 	} else {
