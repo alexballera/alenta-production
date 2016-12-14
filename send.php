@@ -31,7 +31,7 @@ $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
 $header .= "Content-Type: text/plain; charset=iso-8859-1 \r\n";
 $header .= 'From:' . $email. "\r\n"; // Sender's Email
-$header .= 'Cc: direccioncomercial@acciconsultores.com \r\n'; // Carbon copy to Sender
+$header .= 'Cc:' . 'direccioncomercial@acciconsultores.com' . '\r\n'; // Carbon copy to Sender
 // $header .= 'Cc:' . $email. '\r\n'; // Carbon copy to Sender
 
 
