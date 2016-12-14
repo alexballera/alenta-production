@@ -33,15 +33,25 @@ $header .= "Content-Type: text/plain; charset=iso-8859-1" . " \r\n";
 $header .= 'From:' . $email. "\r\n"; // Sender's Email
 $header .= 'Cc:' . $email. "\r\n"; // Carbon copy to Sender
 
-if($_POST){
-mail($emailTo, $subject, $body, $header);
-echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
-	} else {
-    if($_POST["form_name"] == ""){
-      echo '<script language="javascript">alert("Por favor, indica tu nombre.");</script>';
-    exit; }
-    if($_POST["form_email"] == ""){
-      echo '<script language="javascript">alert("Por favor, indica un email de contacto.");</script>';
-    exit; }
+
+// send email
+$success = mail($emailTo, $subject, $body, $header);
+
+// redirect to success page
+if ($success){
+  echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
+}else{
+  echo '<script language="javascript">alert("Revisa los datos ingresados");</script>';
 }
+// if($_POST){
+// mail($emailTo, $subject, $body, $header);
+// echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
+// 	} else {
+//     if($_POST["form_name"] == ""){
+//       echo '<script language="javascript">alert("Por favor, indica tu nombre.");</script>';
+//     exit; }
+//     if($_POST["form_email"] == ""){
+//       echo '<script language="javascript">alert("Por favor, indica un email de contacto.");</script>';
+//     exit; }
+// }
 ?>
