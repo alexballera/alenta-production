@@ -10,7 +10,7 @@ $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha);
 
 $destino = "alexballera@gmail.com";
-$asunto = "FORMULARIO DE EJEMPLO";
+$subject = "Nuevo mensaje de " . $name .;
 
 $body .= "Mensaje Desde El Formulario Web Alenta."."\n";
 $body .= "\n";
@@ -29,7 +29,7 @@ $body .= "Fecha: " . $fechaFormateada ."\n";
   $emailheader = "From: alexballera@gmail.com\r\n";
 
 if($_POST){
-mail($destino, $asunto, $body, $emailheader);
+mail($destino, $subject, $body, $emailheader);
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 	} else {
     if($_POST["form_name"] == ""){
