@@ -18,6 +18,8 @@ $body .= "\n";
 $body .= "EMAIL: " . $email ."\n";
 
 $body .= "\n";
+$body .= "Teléfono: " . $phone ."\n";
+$body .= "\n";
 $body .= "Mensaje: " . $message ."\n";
 $body .= "\n";
 $body .= "Fecha: " . $fechaFormateada ."\n";
