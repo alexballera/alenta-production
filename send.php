@@ -6,25 +6,17 @@ $email = $_POST["form_email"];
 $phone = $_POST["form_phone"];
 $message = $_POST["form_msg"];
 
-$fecha = time();
-$fechaFormateada = date("j/n/Y", $fecha)
-
 	$destino = "alexballera@gmail.com";
 	$asunto = "FORMULARIO DE EJEMPLO";
-
-
-	$body .= "FORMULARIO."."\n";
-	$body .= "\n";
-	$body .= "NOMBRE: " . $name ."\n";
-	$body .= "\n";
-	$body .= "EMAIL: " . $email ."\n";
-  $body .= "\n";
-  $body .= "Fecha: " . $fechaFormateada ."\n";
-
+	$mensaje .= "FORMULARIO."."\n";
+	$mensaje .= "\n";
+	$mensaje .= "NOMBRE: " . $name ."\n";
+	$mensaje .= "\n";
+	$mensaje .= "EMAIL: " . $email ."\n";
   $emailheader = "From: alexballera@gmail.com\r\n";
 
 if($_POST){
-mail($destino, $asunto, $body, $emailheader);
+mail($destino, $asunto, $mensaje, $emailheader) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 	} else {
     if($_POST["form_name"] == ""){
