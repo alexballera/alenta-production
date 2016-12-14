@@ -16,7 +16,7 @@ $message = $_POST["form_msg"];
   $emailheader = "From: alexballera@gmail.com\r\n";
 
 if($_POST){
-mail($destino, $asunto, $mensaje, $emailheader) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
+mail($destino, $asunto, $mensaje, $emailheader);
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 	} else {
     if($_POST["form_name"] == ""){
