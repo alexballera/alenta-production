@@ -40,19 +40,19 @@ $success = mail($emailTo, $subject, $body, $header);
 
 // redirect to success page
 if ($success){
-  echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
-  // echo '<scripts language="javascript">
-  //         $( function() {
-  //         $( "#dialog-message" ).dialog({
-  //           modal: true,
-  //           buttons: {
-  //             Ok: function() {
-  //               $( this ).dialog( "close" );
-  //             }
-  //           }
-  //         });
-  //       } );
-  //       </script>'
+  // echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
+  echo '<scripts language="javascript">
+          $( function() {
+          $( "#dialog-message" ).dialog({
+            modal: true,
+            buttons: {
+              Ok: function() {
+                $( this ).dialog( "close" );
+              }
+            }
+          });
+        } );
+        </script>'
 }else{
   echo '<script language="javascript">alert("Revisa los datos ingresados");</script>';
 }
