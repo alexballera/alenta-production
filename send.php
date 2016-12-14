@@ -10,7 +10,7 @@ $nombre = strip_tags($_POST['name']);
 $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha);
 
-$destino = "alexballera@gmail.com";
+$emailTo = "alexballera@gmail.com";
 $subject = "Nuevo mensaje de $nombre";
 
 $body .= "Mensaje Desde El Formulario Web Alenta."."\n";
@@ -30,7 +30,7 @@ $body .= "Fecha: " . $fechaFormateada ."\n";
   $emailheader = "From: alexballera@gmail.com\r\n";
 
 if($_POST){
-mail($destino, $subject, $body, $emailheader);
+mail($emailTo, $subject, $body, $emailheader);
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 	} else {
     if($_POST["form_name"] == ""){
