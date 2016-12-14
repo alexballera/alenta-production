@@ -6,6 +6,9 @@ $email = $_POST["form_email"];
 $phone = $_POST["form_phone"];
 $message = $_POST["form_msg"];
 
+$fecha = time();
+$fechaFormateada = date("j/n/Y", $fecha);
+
 $destino = "alexballera@gmail.com";
 $asunto = "FORMULARIO DE EJEMPLO";
 $body .= "FORMULARIO."."\n";
