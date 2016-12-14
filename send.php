@@ -41,8 +41,7 @@ $success = mail($emailTo, $subject, $body, $header);
 // redirect to success page
 if ($success){
   // echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
-  echo '
-  <div id="dialog-message" title="Download complete">
+  echo '<div id="dialog-message" title="Download complete">
     <p>
       <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
       Your files have downloaded successfully into the My Downloads folder.
