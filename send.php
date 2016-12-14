@@ -8,15 +8,15 @@ $message = $_POST["form_msg"];
 
 	$destino = "alexballera@gmail.com";
 	$asunto = "FORMULARIO DE EJEMPLO";
-	$mensaje .= "FORMULARIO."."\n";
-	$mensaje .= "\n";
-	$mensaje .= "NOMBRE: " . $name ."\n";
-	$mensaje .= "\n";
-	$mensaje .= "EMAIL: " . $email ."\n";
+	$body .= "FORMULARIO."."\n";
+	$body .= "\n";
+	$body .= "NOMBRE: " . $name ."\n";
+	$body .= "\n";
+	$body .= "EMAIL: " . $email ."\n";
   $emailheader = "From: alexballera@gmail.com\r\n";
 
 if($_POST){
-mail($destino, $asunto, $mensaje, $emailheader);
+mail($destino, $asunto, $body, $emailheader);
 echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 	} else {
     if($_POST["form_name"] == ""){
