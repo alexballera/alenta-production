@@ -10,7 +10,7 @@ $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha);
 
 $destino = "alexballera@gmail.com";
-$subject = "Nuevo mensaje de " . $name .;
+$subject = "Nuevo mensaje";
 
 $body .= "Mensaje Desde El Formulario Web Alenta."."\n";
 $body .= "\n";
