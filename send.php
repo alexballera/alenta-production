@@ -12,10 +12,11 @@ $fechaFormateada = date("j/n/Y", $fecha);
 $destino = "alexballera@gmail.com";
 $asunto = "FORMULARIO DE EJEMPLO";
 $body .= "FORMULARIO."."\n";
+
 $body .= "\n";
-$body .= "NOMBRE: " . $name ."\n";
-
-
+$body .= "Nombre: " . $name ."\n";
+$body .= "\n";
+$body .= "Apellido: " . $lastname ."\n";
 $body .= "\n";
 $body .= "Correo: " . $email ."\n";
 $body .= "\n";
