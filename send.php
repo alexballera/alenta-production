@@ -10,15 +10,15 @@
 	$mensaje .= "EMAIL: " . utf8_decode($_POST["form_email"]) ."\n";
   $emailheader = "From: alexballera@gmail.com\r\n";
 
-if($_POST["form_name"] && $_POST["form_email"] != ""){
+if($_POST){
 mail($destino, $asunto, $mensaje, $emailheader) or die ("Lo sentimos, tu solicitud no ha sido enviada.<br/>Intentelo de nuevo.");
-echo utf8_decode(utf8_encode('Tu consulta ha sido enviada correctamente.'));
+echo '<script language="javascript">alert("Tu consulta ha sido enviada correctamente.");</script>';
 	} else {
     if($_POST["form_name"] == ""){
-    echo utf8_encode ('Por favor, indica tu nombre.');
+      echo '<script language="javascript">alert("Por favor, indica tu nombre.");</script>';
     exit; }
     if($_POST["form_email"] == ""){
-    echo utf8_encode ('Por favor, indica un email de contacto.');
+      echo '<script language="javascript">alert("Por favor, indica un email de contacto.");</script>';
     exit; }
 }
 ?>
