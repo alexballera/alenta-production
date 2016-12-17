@@ -1,3 +1,3 @@
 #!/bin/sh
-# cd ~/public_html/web
-# git pull origin master
+cd ~/public_html/web
+git pull formularios formularios
