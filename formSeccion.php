@@ -36,11 +36,11 @@ $header .= 'From:' . $email. '\r\n'; // Sender's Email
 // validate the variables ======================================================
     // if any of these variables don't exist, add an error to our $errors array
 
-    if (empty($_POST['name']))
-        $errors['name'] = 'El nombre es requerido!.';
+    if (empty($_POST['nameSeccion']))
+        $errors['nameSeccion'] = 'El nombre es requerido!.';
 
-    if (empty($_POST['email']))
-        $errors['email'] = 'El email es requerido!.';
+    if (empty($_POST['emailSeccion']))
+        $errors['emailSeccion'] = 'El email es requerido!.';
 
 
 // return a response ===========================================================
@@ -72,7 +72,7 @@ $header .= 'From:' . $email. '\r\n'; // Sender's Email
             exit;
         } else {
             // mysqli_query($enlace, "INSERT INTO tabla (campo1, campo2, ... campon) VALUES ('val1, val2, ... valn)");
-          mysqli_query($enlace, "INSERT INTO form_element (name, lastname, phone, email, message) VALUES ('$name', '$lastname', '$phone', '$email','$msg')"); //Insert Query
+          mysqli_query($enlace, "INSERT INTO form_element (name, phone, email, message) VALUES ('$name', '$lastname', '$phone', '$email','$msg')"); //Insert Query
           mysqli_close($enlace);
         }
     }
