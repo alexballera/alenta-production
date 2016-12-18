@@ -82,8 +82,7 @@ $header .= 'From:' . $email. '\r\n'; // Sender's Email
             mysqli_close($enlace);
           }
         } else {
-          // $data['errors']  = 'Correo no enviado';
-          alert('Correo No enviado')
+          $data['errors']  = 'Correo no enviado';
         }
 
     }
