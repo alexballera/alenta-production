@@ -14,8 +14,8 @@ $nombre = strip_tags($name);
 $fecha = time();
 $fechaFormateada = date("j/n/Y", $fecha);
 
-// $emailTo = "alexballera@gmail.com";
-$emailTo = "omayraospina@acciconsultores.com";
+$emailTo = "alexballera@gmail.com";
+// $emailTo = "omayraospina@acciconsultores.com";
 $subject = "Nuevo mensaje de $nombre";
 
 $body .= "Mensaje Desde El Formulario Web Alenta.\n";
@@ -36,7 +36,7 @@ $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
 $header .= "Content-Type: text/plain; charset=iso-8859-1 \r\n";
 $header .= 'From:' . $email. '\r\n'; // Sender's Email
-$header .= 'Cc:' . 'direccioncomercial@acciconsultores.com' . '\r\n'; // Carbon copy to Sender
+// $header .= 'Cc:' . 'direccioncomercial@acciconsultores.com' . '\r\n'; // Carbon copy to Sender
 
 
 // validate the variables ======================================================
