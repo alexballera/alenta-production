@@ -5,6 +5,7 @@ $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 
 $name = $_POST["name"];
+$lastname = $_POST["lastname"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
 $msg = $_POST["msg"];
@@ -20,6 +21,8 @@ $subject = "Nuevo mensaje de $nombre";
 $body .= "Mensaje Desde El Formulario Web Alenta.\n";
 $body .= "\n";
 $body .= "Nombre: " . $name ."\n";
+$body .= "\n";
+$body .= "Apellido: " . $lastname ."\n";
 $body .= "\n";
 $body .= "Correo: " . $email ."\n";
 $body .= "\n";
@@ -75,7 +78,7 @@ $header .= 'From:' . $email. '\r\n'; // Sender's Email
             exit;
         } else {
             // mysqli_query($enlace, "INSERT INTO tabla (campo1, campo2, ... campon) VALUES ('val1, val2, ... valn)");
-          mysqli_query($enlace, "INSERT INTO form_element (name, phone, email, message) VALUES ('$name', '$lastname', '$phone', '$email','$msg')"); //Insert Query
+          mysqli_query($enlace, "INSERT INTO form_element (name, lastname, phone, email, message) VALUES ('$name', '$lastname', '$phone', '$email','$msg')"); //Insert Query
           mysqli_close($enlace);
         }
     }
