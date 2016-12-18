@@ -4,10 +4,10 @@
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 
-$name = $_POST["nameSeccion"];
-$email = $_POST["emailSeccion"];
-$phone = $_POST["phoneSeccion"];
-$msg = $_POST["msgSeccion"];
+$name = $_POS"];
+$email = $_POST"];
+$phone = $_POST"];
+$msg = $_PO"];
 $nombre = strip_tags($name);
 
 $fecha = time();
@@ -39,11 +39,11 @@ $header .= 'From:' . $email. '\r\n'; // Sender's Email
 // validate the variables ======================================================
     // if any of these variables don't exist, add an error to our $errors array
 
-    if (empty($_POST['nameSeccion']))
-        $errors['nameSeccion'] = 'El nombre es requerido!.';
+    if (empty($_POST['name']))
+        $errors['name'] = 'El nombre es requerido!.';
 
-    if (empty($_POST['emailSeccion']))
-        $errors['emailSeccion'] = 'El email es requerido!.';
+    if (empty($_POST['email']))
+        $errors['email'] = 'El email es requerido!.';
 
 
 // return a response ===========================================================
