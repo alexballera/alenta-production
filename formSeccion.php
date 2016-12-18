@@ -4,10 +4,10 @@
 $errors         = array();      // array to hold validation errors
 $data           = array();      // array to pass back data
 
-$name = $_POS"];
-$email = $_POST"];
-$phone = $_POST"];
-$msg = $_PO"];
+$name = $_POST["name"];
+$email = $_POST["email"];
+$phone = $_POST["phone"];
+$msg = $_POST["msg"];
 $nombre = strip_tags($name);
 
 $fecha = time();
